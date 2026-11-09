@@ -1,0 +1,619 @@
+
+/* =================================
+   BLOOM & CO. - CSS RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* =================================
+   BLOOM & CO. - BASE STYLES
+================================= */
+
+:root {
+    --primary-color: #8b5368;
+    --secondary-color: #d9a6b5;
+    --accent-color: #a8b59a;
+    --background-color: #fffaf7;
+    --text-color: #40343a;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* =================================
+   BLOOM & CO. - NAVIGATION
+================================= */
+
+header {
+    background-color: var(--white);
+    padding: 20px 6%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul a {
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover,
+nav ul a[aria-current="page"] {
+    color: var(--primary-color);
+}
+
+/* =================================
+   BLOOM & CO. - HERO SECTION
+================================= */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 8%;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #f8e9ed,
+        #fffaf7,
+        #e9eee4
+    );
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #693c4e;
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   BLOOM & CO. - WELCOME SECTION
+================================= */
+
+.welcome {
+    padding: 80px 8%;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.welcome h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* =================================
+   BLOOM & CO. - FEATURED FLOWERS
+================================= */
+
+.featured {
+    padding: 70px 8%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 35px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flower-card {
+    background-color: var(--background-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.flower-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.flower-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.flower-card h3 {
+    margin-bottom: 10px;
+}
+
+/* =================================
+   BLOOM & CO. - CALL TO ACTION
+================================= */
+
+.call-to-action {
+    padding: 65px 8%;
+    text-align: center;
+    background-color: #f8e9ed;
+}
+
+.call-to-action h2 {
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    margin-bottom: 25px;
+}
+
+/* =================================
+   BLOOM & CO. - FOOTER
+================================= */
+
+footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 8%;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+/* =================================
+   BLOOM & CO. - PAGE HEADINGS
+================================= */
+
+.page-heading {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #f8e9ed;
+}
+
+.page-heading h1 {
+    font-size: 2.8rem;
+}
+
+.page-heading p {
+    margin-bottom: 10px;
+}
+
+/* =================================
+   BLOOM & CO. - ABOUT PAGE
+================================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-content p {
+    line-height: 1.9;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 60px 8%;
+    background-color: var(--white);
+}
+
+.mission-vision article {
+    padding: 30px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* =================================
+   BLOOM & CO. - SERVICES PAGE
+================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 8%;
+}
+
+.services-grid .flower-card {
+    text-align: center;
+}
+
+.services-grid .flower-card img {
+    height: 280px;
+}
+
+.services-grid .flower-card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.services-grid .flower-card a:hover {
+    color: var(--secondary-color);
+}
+
+/* =================================
+   BLOOM & CO. - ENQUIRY FORM
+================================= */
+
+.enquiry-section {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8c9ce;
+    border-radius: 7px;
+    background-color: var(--background-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.enquiry-section button {
+    border: none;
+    cursor: pointer;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* =================================
+   BLOOM & CO. - CONTACT PAGE
+================================= */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 8%;
+}
+
+.contact-card {
+    padding: 35px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card h2 {
+    margin-bottom: 25px;
+}
+
+.location {
+    padding: 15px 0;
+    border-bottom: 1px solid #eadde1;
+}
+
+.location:last-child {
+    border-bottom: none;
+}
+
+/* =================================
+   BLOOM & CO. - RESPONSIVE DESIGN
+================================= */
+
+/* TABLETS */
+@media screen and (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        gap: 25px;
+    }
+
+}
+
+/* MOBILE PHONES */
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 60px 6%;
+    }
+
+    .featured-grid,
+    .services-grid,
+    .about-content,
+    .mission-vision,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .featured,
+    .welcome {
+        padding: 50px 6%;
+    }
+
+    .page-heading {
+        padding: 50px 6%;
+    }
+
+    .enquiry-section {
+        margin: 30px 5%;
+        padding: 25px 18px;
+    }
+
+    .about-content img {
+        height: 280px;
+    }
+
+    .services-grid {
+        padding: 40px 6%;
+    }
+
+    .contact-content {
+        padding: 0 6%;
+        margin: 40px auto;
+    }
+
+}
+
+/* =================================
+   BLOOM & CO. - INTERACTION STATES
+================================= */
+
+/* Keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+}
+
+/* Navigation active state */
+nav ul a:active {
+    color: var(--secondary-color);
+}
+
+/* Button active state */
+.button:active {
+    transform: scale(0.97);
+}
+
+/* Form interaction */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--primary-color);
+}
+
+/* Image interaction */
+.flower-card img {
+    transition: transform 0.3s ease;
+}
+
+.flower-card:hover img {
+    transform: scale(1.02);
+}
