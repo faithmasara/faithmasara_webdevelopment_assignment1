@@ -37,3 +37,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+// Flower search functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const flowerSearch = document.getElementById("flowerSearch");
+    const flowerCards = document.querySelectorAll(".flower-card");
+
+    if (!flowerSearch) return;
+
+    flowerSearch.addEventListener("input", function () {
+        const searchTerm = flowerSearch.value.toLowerCase().trim();
+
+        flowerCards.forEach(function (card) {
+            const flowerDetails = card.textContent.toLowerCase();
+
+            if (flowerDetails.includes(searchTerm)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
