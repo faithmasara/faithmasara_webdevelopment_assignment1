@@ -44,5 +44,3 @@ Screenshots showing the website at different screen sizes are saved in the `scre
 - `tablet-view.png`
 - `mobile-view.png`
 
-## Disclaimer
-Bloom & Co. Florist is a hypothetical business created for educational purposes.

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const flowerSearch = document.getElementById("flowerSearch");
     const flowerCards = document.querySelectorAll(".flower-card");
-
+const noResults = document.getElementById("noResults");
     if (!flowerSearch) return;
 
     flowerSearch.addEventListener("input", function () {
@@ -57,5 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 card.style.display = "none";
             }
         });
+        let found = false;
+
+flowerCards.forEach(function (card) {
+    if (card.style.display !== "none") {
+        found = true;
+    }
+});
+
+noResults.style.display = found || !searchTerm ? "none" : "block";
     });
 });
