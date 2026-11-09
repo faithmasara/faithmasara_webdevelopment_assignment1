@@ -617,3 +617,12 @@ textarea:hover {
 .flower-card:hover img {
     transform: scale(1.02);
 }
+.hero-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
