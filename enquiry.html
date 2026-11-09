@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send Bloom & Co. Florist an enquiry about bouquets, custom flower arrangements and event flowers in Cape Town.">
+
+    <title>Make an Enquiry | Bloom & Co. Florist</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">Bloom & Co.</a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-heading">
+            <p class="eyebrow">LET'S CREATE SOMETHING BEAUTIFUL</p>
+            <h1>Make an Enquiry</h1>
+            <p>Tell us about the flowers you're looking for.</p>
+        </section>
+
+        <section class="enquiry-section">
+            <form id="enquiryForm" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName"
+                           required minlength="2"
+                           autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                           required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                           required autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What are you interested in?</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="bouquets">Signature Bouquets</option>
+                        <option value="roses">Classic Roses</option>
+                        <option value="events">Event Flowers</option>
+                        <option value="custom">Custom Arrangements</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Required Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us more about your enquiry</label>
+                    <textarea id="message" name="message"
+                              rows="5" required minlength="10"></textarea>
+                </div>
+
+                <button type="submit" class="button">Submit Enquiry</button>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bloom & Co. Florist. All rights reserved.</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+</body>
+</html>
